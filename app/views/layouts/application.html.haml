@@ -16,4 +16,15 @@
     = stylesheet_link_tag :app, "data-turbo-track": "reload"
     = javascript_include_tag "application", "data-turbo-track": "reload", type: "module"
   %body
-    = yield
+    %nav.navbar.bg-body-tertiary
+      .container-fluid
+        = link_to root_path, class: 'navbar-brand fw-bold' do
+          = image_tag '20260324_125059000_iOS.png', alt: 'Logo', width: '30', height: '30', class: 'd-inline-block align-text-top me-2'
+          UniHub
+        
+    
+    .d-flex.gap-3
+      = link_to '講義一覧', tasks_path, class: 'btn btn-outline-primary btn-sm'
+      = link_to '新規登録', new_task_path, class: 'btn btn-outline-primary btn-sm'
+    .container.mt-4 
+      = yield
