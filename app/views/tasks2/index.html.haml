@@ -1,0 +1,9 @@
+%h1 教授一覧
+
+-# %ul 
+-#   -@tasks2.each do |task|
+-#     %li= link_to task.title, task_path(task)
+
+.list_group
+  -@tasks2.each do |task|
+    = link_to task.title, task_path(task), class: "list-group-item"
