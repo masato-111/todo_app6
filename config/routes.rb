@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get "tasks2/new"
-  get "tasks/new"
+  get "professors/new"
   root "home#index"
   # get 'tasks/new', to:'tasks#new', as: :new_task
   # post 'tasks/new', to:'tasks#create'
@@ -10,5 +9,5 @@ Rails.application.routes.draw do
   # patch 'tasks/:id', to: 'tasks#update'
   # destroy 'tasks/:id' to: 'tasks#delete'
   resources :tasks
-  resources :tasks2
+  resources :professors
 end

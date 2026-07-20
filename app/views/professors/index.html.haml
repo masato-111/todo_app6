@@ -1,0 +1,9 @@
+%h1 教授一覧
+
+-# %ul 
+-#   -@tasks2.each do |task|
+-#     %li= link_to task.title, task_path(task)
+
+.list-group
+  -@professors.each do |professor|
+    = link_to professor.title, professor_path(professor), class: "list-group-item"
