@@ -1,5 +1,5 @@
 = simple_form_for professor do |f|
   = f.input :title
   = f.input :description
-  = f.input :image, input_html: {accept:'image/'}
+  = f.input :image, input_html: {accept:'image/*'}
   = f.button :submit, class: 'btn btn-primary'

@@ -24,8 +24,10 @@
         
     
     .d-flex.gap-3
-      = link_to '講義レビュー', new_task_path, class: 'btn btn-outline-primary btn-sm'
-      = link_to '教授レビュー', new_professor_path, class: 'btn btn-outline-primary btn-sm'
+      = link_to '講義レビュー', new_task_path, class: "btn btn-outline-primary me-2"
+      = link_to '講義一覧', tasks_path, class: "btn btn-sm btn-outline-secondary"
+      = link_to '教授レビュー', new_professor_path, class: "btn btn-outline-primary me-2"
+      = link_to '教授一覧', professors_path, class: "btn btn-sm btn-outline-secondary"
       
     .container.mt-4 
       = yield

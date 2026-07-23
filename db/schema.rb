@@ -49,14 +49,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_07_20_040221) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "task2s", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.text "description"
-    t.string "string"
-    t.string "title"
-    t.datetime "updated_at", null: false
-  end
-
   create_table "tasks", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.text "description"
