@@ -31,7 +31,8 @@ RSpec.describe "教授レビュー管理", type: :system do
                 # Create Professorをクリックする
                 click_on "Create Professor", exact: true
                 # 投稿が成功したことを確認する
-                visit professor_path(Professor.last)
+                click_on "末柄真翔"
+
                 expect(page).to have_selector "img[src*='test_image.png']"
             end
         end
