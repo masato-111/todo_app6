@@ -142,7 +142,7 @@ RSpec.describe "教授レビュー管理", type: :system do
           #Update Professorをクリックする
           click_on "Update Professor"
           #編集ができたか確認する
-          expect(page).to have_selector "img[src*=test_image2.png]"
+          expect(page).to have_selector "img[src*='test_image2.png']"
         end
       end
     end
