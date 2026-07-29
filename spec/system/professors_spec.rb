@@ -10,9 +10,9 @@ RSpec.describe "教授レビュー管理", type: :system do
                 # 新規投稿画面を開く
                 visit new_professor_path
                 # titleに入力する
-                fill_in "title", with: "末柄真翔"
+                fill_in "Title", with: "末柄真翔"
                 # descriptionに入力する
-                fill_in "description", with: "単位が取りやすいです"
+                fill_in "Description", with: "単位が取りやすいです"
                 # Create Professorをクリックする
                 click_on "Create Professor", exact:true
                 # 投稿が成功したことを確認する
@@ -22,9 +22,9 @@ RSpec.describe "教授レビュー管理", type: :system do
                 # 新規投稿画面を開く
                 visit new_professor_path
                 # titleに入力する
-                fill_in "title", with: "末柄真翔"
+                fill_in "Title", with: "末柄真翔"
                 # descriptionに入力する
-                fill_in "description", with: "楽に単位が取れます"
+                fill_in "Description", with: "楽に単位が取れます"
                 # 画像ファイルを選ぶ
                 image_path = Rails.root.join('spec/fixtures/files/test_image.png')
                 attach_file("professor[image]", image_path, make_visible: true)
@@ -40,9 +40,9 @@ RSpec.describe "教授レビュー管理", type: :system do
                 # 新規投稿画面を開く
                 visit new_professor_path
                 # titleを入力しない
-                fill_in "title", with: ""
+                fill_in "Title", with: ""
                 # descriptionに入力する
-                fill_in "description", with: "楽に単位が取れます"
+                fill_in "Description", with: "楽に単位が取れます"
                 # Create Professorをクリックする
                 click_on "Create Professor", exact: true
                 # 登録ができていないことを確認する
@@ -108,7 +108,7 @@ RSpec.describe "教授レビュー管理", type: :system do
           #編集をするをクリックする(編集画面に遷移する)
           click_on "編集", exact:true
           #titleを書き換える
-          fill_in "title", with: "すえがらまさと"
+          fill_in "Title", with: "すえがらまさと"
           #Update Professorをクリックする
           click_on "Update Professor"
           #編集ができたか確認する
@@ -122,7 +122,7 @@ RSpec.describe "教授レビュー管理", type: :system do
           #編集をするをクリックする(編集画面に遷移する)
           click_on "編集", exact:true
           #descriptionを書き換える
-          fill_in "description", with: "テストが難しいです"
+          fill_in "Description", with: "テストが難しいです"
           #Update Professorをクリックする
           click_on "Update Professor"
           #編集ができたか確認する
