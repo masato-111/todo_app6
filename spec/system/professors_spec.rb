@@ -154,7 +154,9 @@ RSpec.describe "教授レビュー管理", type: :system do
         #教授詳細ページに移動する
         visit professor_path(professor)
         #削除ボタンをクリックする
-        click_on "削除"
+        page.accept_confirm do
+          click_on '削除'
+        end
         #削除したことを確認する
         expect(page).not_to have_content "末柄真翔"
       end
