@@ -1,0 +1,10 @@
+-# = form_with model: task do |f|
+= simple_form_for task do |f|
+  -#= f.label :title
+  -#= f.text_field :title
+  = f.input :title
+  -#= f.label :description
+  -#= f.text_area :description
+  = f.input :description
+  = f.input :image, input_html: {accept:'image/*'}
+  = f.button :submit, class: 'btn btn-primary'

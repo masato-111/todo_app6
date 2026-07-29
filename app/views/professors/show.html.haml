@@ -1,0 +1,15 @@
+%h1 教授詳細
+.d-flex.gap-2
+  =link_to '編集', edit_professor_path(@professor), class: 'btn btn-primary'
+  =button_to '削除', professor_path(@professor), method: :delete, data: {turbo_confirm: '本当に削除してよろしいですか'}, class: 'btn btn-danger'
+
+%table.table
+  %tr
+    %th 教授名
+    %td= @professor.title
+  %tr
+    %th 説明
+    %td= @professor.description
+
+- if @professor.image.attached?
+  =image_tag @professor.image

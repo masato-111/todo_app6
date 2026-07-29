@@ -1,0 +1,14 @@
+%h1 講義詳細
+.d-flex.gap-2
+  =link_to '編集', edit_task_path(@task), class: 'btn btn-primary'
+  =button_to '削除', task_path(@task), method: :delete, data: {turbo_confirm: '本当に削除してよろしいですか？'}, class: 'btn btn-danger'
+%table.table
+  %tr
+    %th 講義名
+    %td= @task.title
+  %tr
+    %th 説明
+    %td= @task.description
+  
+- if @task.image.attached? 
+  =image.tag @task.image

@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title= content_for(:title) || "Todo App6"
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}/
+    %meta{:content => "Todo App6", :name => "application-name"}/
+    %meta{:content => "yes", :name => "mobile-web-app-capable"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = yield :head
+    %link{:href => "/icon.png", :rel => "icon", :type => "image/png"}/
+    %link{:href => "/icon.svg", :rel => "icon", :type => "image/svg+xml"}/
+    %link{:href => "/icon.png", :rel => "apple-touch-icon"}/
+    = stylesheet_link_tag :app, "data-turbo-track": "reload"
+    = javascript_include_tag "application", "data-turbo-track": "reload", type: "module"
+  %body
+    %nav.navbar.bg-body-tertiary
+      .container-fluid
+        = link_to root_path, class: 'navbar-brand fw-bold' do
+          = image_tag '20260324_125059000_iOS.png', alt: 'Logo', width: '30', height: '30', class: 'd-inline-block align-text-top me-2'
+          UniHub
+        
+    
+    .d-flex.gap-3
+      = link_to '講義レビュー', new_task_path, class: "btn btn-outline-primary me-2"
+      = link_to '講義一覧', tasks_path, class: "btn btn-sm btn-outline-secondary"
+      = link_to '教授レビュー', new_professor_path, class: "btn btn-outline-primary me-2"
+      = link_to '教授一覧', professors_path, class: "btn btn-sm btn-outline-secondary"
+      
+    .container.mt-4 
+      = yield
