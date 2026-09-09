@@ -149,7 +149,7 @@ GEM
       ruby_parser (~> 3.5)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
-    image_processing (2.0.2)
+    image_processing (2.1.0)
     io-console (0.8.2)
     irb (1.18.0)
       pp (>= 0.6.0)
@@ -416,7 +416,7 @@ DEPENDENCIES
   factory_bot_rails
   haml-rails
   html2haml
-  image_processing (~> 2.0)
+  image_processing (~> 2.1)
   jbuilder
   jsbundling-rails
   kamal
